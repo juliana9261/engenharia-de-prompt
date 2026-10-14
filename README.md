@@ -1,75 +1,62 @@
 # Engenharia de Prompts
 
-projeto realizado no curso de desenvolvimentos de sistemas
+Projeto realizado no curso de Análise e Desenvolvimento de Sistemas.
 
-## O que é grande modelo de linguagem (LLM)?
+## O que é um grande modelo de linguagem (LLM)?
 
-É um tipo de algoritmo de inteligência artificial que aplica técnicas de redes neurais com diversos parâmetros para processar e compreender linguagens humanas ou textos usando técnicas de aprendizado auto supervisionado. Tarefas como geração de texto, tradução automática, codificação automática, chatbots ou IA convencional são aplicações do modelo de grandes linguagens.
+É um tipo de algoritmo de inteligência artificial que aplica técnicas de redes neurais com muitos parâmetros para processar e compreender a linguagem humana, usando aprendizado autossupervisionado. Geração de texto, tradução automática, geração de código e chatbots são aplicações dos grandes modelos de linguagem.
 
 ## O que significa a sigla GPT?
 
-Generative Pretrained Transformer (GPT)
+**Generative Pre-trained Transformer.**
 
-GENERATIVE: Porque o modelo pode gerar textos, responder perguntas,escrever histórias, códigos e etc.
+- **Generative:** o modelo gera conteúdo: textos, respostas, histórias, códigos etc.
+- **Pre-trained:** ele é pré-treinado em uma enorme quantidade de dados da internet antes de ser ajustado para tarefas específicas.
+- **Transformer:** é o tipo de arquitetura de rede neural usada, muito eficiente para entender e gerar linguagem natural.
 
-Pre- trained: Porque ele é pré treinado em uma enorme quantidade de dados da internet antes de ser ajustado para tarefas especifícas.
+## O que é Engenharia de Prompts?
 
-Transformer: é o tipo de arquitetura de rede neural usada, muito eficiente para entender e gerar linguagem natural.
+A engenharia de prompts é o processo de escrever prompts, ou comandos, para um modelo de inteligência artificial baseado em linguagem, como o ChatGPT, da OpenAI. Essa disciplina foca na formulação de comandos adequados para otimizar as respostas e a interação com o modelo. Em outras palavras, gerar resultados relevantes e úteis para uma questão.
 
- ## O que é Engenharia de Prompts?
+## Por que Engenharia de Prompts é importante para desenvolvedores de sistemas?
 
- A engenharia de prompt é o processo de gerar prompts, ou comandos, para um modelo de inteligência artificial baseado em linguagem, como chat gpt, da open AÍ. Essa disciplina foca na formulação de comandos adequados para otimizar as respostas e a interação com o modelo de AI. Em outras palavras, gerar resultados relevantes e úteis para uma questão. 
+Com um prompt bem feito, a inteligência artificial entende melhor o que a pessoa quer e formula respostas melhores. Para quem desenvolve sistemas, isso economiza tempo e ajuda no desenvolvimento.
 
- ##  Por que Engenharia de Prompts é crucial para Desenvolvedores de Sistemas?
+## Quais são os princípios fundamentais da construção de prompts?
 
+Saber perguntar, com objetividade e clareza, para que a IA saiba responder; explicar como deseja a resposta; e ir refinando o prompt até que fique da forma desejada.
 
-A engenharia de prompts é importante para os desenvolvedores de sistemas pois ajuda a formular melhor as perguntas para o chat gpt, com o prompt bem feito, a inteligência artificial entende melhor o'que a pessoa quer, e formular melhor as respostas para deixar o sistema mais eficiente, também tem o fato de economizar o tempo e ajudar no desenvolvimento. 
+## Principais ferramentas de IA generativa para desenvolvimento de sistemas
 
-## Quais são os Princípios Fundamentais da Construção de Prompts?
-
-Saber perguntar, ter objetividade e clareza para que a IA saiba responder, explicar como deseja a resposta e ir perguntando até que o prompt fique da forma desejada. 
-
-## Principais Ferramentas de IA Generativa Relevantes para Desenvolvimento de Sistemas.
-
-Tem o github que ajuda a gerar códigos e funciona como um copiloto para o desenvolvedor, o chat gpt que pode identificar erros nos códigos e ajudar a desenvolvê-los. São ferramentas que auxiliam na hora da criação. 
+- **GitHub Copilot:** ajuda a gerar código e funciona como um copiloto para o desenvolvedor.
+- **ChatGPT:** pode identificar erros no código e ajudar a desenvolvê-lo.
 
 ## Técnicas de engenharia de prompt
 
-## Prompt 1: zero shot
-É uma técnica que apenas executa uma tarefa de maneira simples.
+### 1. Zero-shot
 
-![alt text](img/image-1.png)
+O modelo executa a tarefa sem receber nenhum exemplo.
 
-## prompt 2
-## few shot
+![Exemplo de prompt zero-shot](img/image-1.png)
 
+### 2. Few-shot
 
-` me de a formula de bhaskara `
+O modelo recebe alguns exemplos de entrada e saída antes da pergunta, e segue o mesmo padrão na resposta.
 
-entrada: `
- me de a formula de bhaskara`
+> **Entrada:** me dê a fórmula de Bhaskara
+> **Saída:** a fórmula de Bhaskara é usada para encontrar as raízes de uma equação do segundo grau, do tipo ax² + bx + c = 0.
+>
+> **Entrada:** como funciona a fórmula de Bhaskara?
+> **Saída:** primeiro calcula-se Δ = b² − 4ac; depois, x = (−b ± √Δ) / 2a.
 
-saida: a formula de bhaskara é utilizada para encontrar raizes de uma equação quadrática do tipo ax+ bx +c = 0
+![Exemplo de prompt few-shot](img/image-2.png)
 
-entrada: `como funciona a formula de bhaskara?`
+### 3. One-shot
 
-saída: bhaskara calcula as raizes de ax +bx +c = 0 primeiro,^ =b2 - 4ac depois, x 
+O modelo recebe um único exemplo de como a resposta deve ser. Usei essa técnica porque já dei a ele o exemplo do formato que eu queria.
 
+> crie uma rotina para uma pessoa que estuda das 8h às 11h e trabalha das 15h às 3h da manhã
 
+Com apenas um exemplo, o modelo já forneceu a rotina apropriada.
 
-
-![alt text](img/image-2.png)
-
-## prompt 3
-## one-shot
-utilizei essa técnica pois já dei a ela o exemplo de como eu queria minha resposta
-
-`crie uma rotina para uma pessoa que estuda das 8h as 11h e trabalha das 15h as 3h da manhã`
-
-com apenas um exemplo o modelo já me fornece a rotina apropriada.
-
-![alt text](img/image.png)
-
-
-
- 
+![Exemplo de prompt one-shot](img/image.png)
